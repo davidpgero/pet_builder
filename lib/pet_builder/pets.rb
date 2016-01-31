@@ -9,5 +9,11 @@ module PetBuilder
     def execute
       Opener.call(self)
     end
+
+    class << self
+      def build(file_name)
+        new(file_name, PetBuilder::Pet).execute
+      end
+    end
   end
 end

@@ -17,6 +17,5 @@ describe PetBuilder::Pets do
       allow(PetBuilder::Opener).to receive(:call).with(subject).and_return(return_data)
       expect(subject.execute).to eq return_data
     end
-
   end
 end
