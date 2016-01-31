@@ -24,15 +24,7 @@ module PetBuilder
         private
         def init_new_presenter( data, row )
           Openers::Presenter.new(data).build(row)
-        #   presenter(data).new(row)
-        # rescue NoMethodError => e
-        #   raise PresenterInitializeError.new(e.message)
         end
-
-        # def presenter(data)
-        #   raise MissingPresenter.new unless data.respond_to?(:presenter)
-        #   data.presenter
-        # end
       end
     end
   end
