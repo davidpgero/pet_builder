@@ -14,8 +14,8 @@ describe PetBuilder::Openers::Template do
 
   let(:mock_file_options) { {:universal_newline=>false, :headers=>true, :header_converters=>:symbol, :col_sep=>','} }
   let(:file_not_found_error) { PetBuilder::Openers::Template::FileNotFound }
-  let(:presenter_init_error) { PetBuilder::Openers::Template::PresenterInitializeError }
-  let(:presenter_missing_error) { PetBuilder::Openers::Template::MissingPresenter }
+  let(:presenter_init_error) { PetBuilder::Openers::Presenter::PresenterInitializeError }
+  let(:presenter_missing_error) { PetBuilder::Openers::Presenter::MissingPresenter }
   let(:csv_sample_content) { "name,age,pet\nPeter,25,dog" }
 
   describe '.separator' do
