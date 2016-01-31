@@ -6,7 +6,7 @@ module PetBuilder
       @presenter = presenter
     end
 
-    def get_list
+    def execute
       Opener.call(self)
     end
   end
