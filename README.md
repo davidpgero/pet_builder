@@ -5,6 +5,25 @@
 
 Welcome! It is a pet project. My aim show some interesting stuff.
 
+## Install
+```bash
+git clone https://github.com/davidpgero/pet_builder.git pet_builder
+cd pet_builder
+bundle install
+```
+
+## Usage
+```bash
+cd pet_builder
+echo 'name,age,dog\nPeter,12,dog' > test.csv
+echo 'name;age;dog\nPeter;12;dog' > test.ssv
+bundle console
+```
+
+```ruby
+PetBuilder.build('test.csv')
+PetBuilder.build('test.ssv')
+```
 
 ## License
 

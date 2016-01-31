@@ -3,7 +3,7 @@ module PetBuilder
     class SSV < Template
       class << self
         def separator
-          ';'
+          ';'.freeze
         end
       end
     end
