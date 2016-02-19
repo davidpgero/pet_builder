@@ -11,6 +11,8 @@ module PetBuilder
     end
 
     class << self
+
+      # @param [String]: File name
       def build(file_name)
         new(file_name, PetBuilder::Pet).execute
       end

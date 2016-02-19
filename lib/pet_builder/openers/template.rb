@@ -4,6 +4,9 @@ module PetBuilder
       FileNotFound = Class.new(StandardError)
 
       class << self
+
+        # @param[#file_name]
+        # @return[Array]
         def build(data)
           res = []
           ::CSV.foreach(data.file_name,

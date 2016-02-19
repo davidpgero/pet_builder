@@ -1,6 +1,8 @@
 module PetBuilder
   class Pet
     attr_reader :name, :age, :pet
+
+    # @param [#name, #age, #pet, #error_policy]
     def initialize(data)
       @error_policy = data.fetch(:error_policy) { Proc.new { nil } }
       @name = data.fetch(:name) { error_policy.call [:name, data] }
