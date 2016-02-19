@@ -12,7 +12,7 @@ module PetBuilder
 
     class << self
 
-      # @param [String]: File name
+      # @param file_name [String]: File name
       def build(file_name)
         new(file_name, PetBuilder::Pet).execute
       end

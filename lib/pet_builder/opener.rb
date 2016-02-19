@@ -5,8 +5,8 @@ module PetBuilder
 
     class << self
 
-      # @param[#file_name]: File name
-      # @raise FileNameMissing, NotSupportedFormat
+      # @param data [#file_name]: File name
+      # @raise [FileNameMissing, NotSupportedFormat]
       def call(data)
         raise FileNameMissing.new(data) unless data.respond_to?(:file_name)
 

@@ -5,8 +5,9 @@ module PetBuilder
 
       class << self
 
-        # @param[#file_name]
-        # @return[Array]
+        # @param data [#file_name] The file name
+        # @return [Array]
+        # @raise [FileNotFound] If the file not exists
         def build(data)
           res = []
           ::CSV.foreach(data.file_name,
@@ -20,6 +21,7 @@ module PetBuilder
           raise FileNotFound.new(e.message)
         end
 
+        # @raise [NotImplementedError]
         def separator
           raise NotImplementedError
         end

@@ -4,15 +4,15 @@ module PetBuilder
       MissingPresenter          = Class.new(StandardError)
       PresenterInitializeError  = Class.new(StandardError)
 
-      # @param[#presenter]: Presenter
-      # @raise MissingPresenter
-      # @return[#build]
+      # @param data [#presenter] Presenter
+      # @raise [MissingPresenter]
+      # @return [#build]
       def initialize(data)
         raise MissingPresenter.new(data) unless data.respond_to?(:presenter)
         @presenter = data.presenter
       end
 
-      # @param[#to_s]
+      # @param row [#to_s] One row
       def build(row)
         presenter.new(row)
         rescue NoMethodError => e
